@@ -903,6 +903,30 @@ footer {
   line-height: 1.65;
 }
 
+/* Infinite scroll ticker */
+.portfolio-ticker {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.portfolio-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: ticker-scroll 25s linear infinite;
+}
+
+.portfolio-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -915,6 +939,8 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  flex-shrink: 0;
+  width: 280px;
 }
 
 /* Phone mockup */
