@@ -589,6 +589,13 @@ section {
 
 .price-features li:last-child { border-bottom: none; }
 
+.price-note {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 24px;
+  margin-top: -20px;
+}
+
 .check {
   width: 16px;
   height: 16px;
@@ -596,6 +603,10 @@ section {
   color: var(--orange);
   font-size: 13px;
   font-weight: 700;
+}
+
+.check.cross {
+  color: var(--text-dim);
 }
 
 /* TESTIMONIALS */
