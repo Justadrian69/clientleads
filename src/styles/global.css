@@ -864,6 +864,14 @@ footer {
 .hero-content .hero-sub { animation: fadeUp 0.6s 0.4s ease forwards; opacity: 0; }
 .hero-content .hero-actions { animation: fadeUp 0.6s 0.55s ease forwards; opacity: 0; }
 
+@media (min-width: 1024px) {
+  nav { height: 78px; padding: 0 56px; }
+  .nav-logo { font-size: 28px; }
+  .nav-links { gap: 42px; }
+  .nav-links a { font-size: 14px; letter-spacing: 0.09em; }
+  .nav-cta { font-size: 14px; font-weight: 800; padding: 14px 30px; border-radius: 9px; }
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   nav { padding: 0 24px; }
@@ -913,18 +921,24 @@ footer {
 
 .portfolio-track {
   display: flex;
-  gap: 12px;
   width: max-content;
   animation: ticker-scroll 25s linear infinite;
+  will-change: transform;
 }
 
 .portfolio-track:hover {
   animation-play-state: paused;
 }
 
+.portfolio-group {
+  display: flex;
+  gap: 12px;
+  padding-right: 12px;
+}
+
 @keyframes ticker-scroll {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-33.333%); }
+  100% { transform: translate3d(-33.333333%, 0, 0); }
 }
 
 .portfolio-grid {
@@ -1031,7 +1045,8 @@ footer {
 
 @media (max-width: 900px) {
   .portfolio-grid { grid-template-columns: 1fr; }
-  .portfolio-track { gap: 6px; animation-duration: 19s; }
+  .portfolio-track { animation-duration: 19s; }
+  .portfolio-group { gap: 6px; padding-right: 6px; }
   .phone-mockup { width: 78%; }
 }
 
