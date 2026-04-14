@@ -1031,7 +1031,8 @@ footer {
 
 @media (max-width: 900px) {
   .portfolio-grid { grid-template-columns: 1fr; }
-  .phone-mockup { width: 55%; }
+  .portfolio-track { gap: 6px; animation-duration: 19s; }
+  .phone-mockup { width: 78%; }
 }
 
 /* ─── CONTACT PAGE ─────────────────────────────────────── */
